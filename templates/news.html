@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}News page!{% endblock %}
+
+{% block content %}
+<div class="main-wrapper">
+<h1>You are the the news page!</h1>
+{{ lang_list }}
+
+    <ul>
+        {% for lang in lang_list %}
+        <li>{{ lang }}</li>
+        {% endfor %}
+    </ul>
+    <ul>
+        {% for news in news_list %}
+        <li>
+            <h3>{{ news.title }}</h3>
+            <p>{{ news.description }}</p>
+        </li>
+
+        {% endfor %}
+    </ul>
+
+</div>
+{% endblock %}
